@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "mfc_demo.h"
+#include <strsafe.h>
 
 #define MAX_LOADSTRING 100
 
@@ -247,8 +248,15 @@ void DrawTile(HDC hdc, int x, int y, int iconIndex)
         LineTo(hdc, centerX, centerY - radius);
         break;
     case 3:
-        Polygon(hdc, (POINT[]){{centerX, centerY - radius}, {centerX + radius, centerY + radius / 2}, {centerX - radius, centerY + radius / 2}}, 3);
+    {
+        POINT trianglePts[] = {
+            {centerX, centerY - radius},
+            {centerX + radius, centerY + radius / 2},
+            {centerX - radius, centerY + radius / 2}
+        };
+        Polygon(hdc, trianglePts, 3);
         break;
+    }
     case 4:
         MoveToEx(hdc, centerX, centerY - radius, nullptr);
         LineTo(hdc, centerX + radius, centerY + radius);
