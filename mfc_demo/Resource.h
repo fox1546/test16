@@ -16,15 +16,39 @@
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
 #endif
+
+// 连连看游戏资源ID
+#define IDM_SETTINGS			32771
+#define IDM_START				32772
+#define IDD_SETTINGS			201
+#define IDC_EDIT_WIDTH			2001
+#define IDC_EDIT_HEIGHT			2002
+#define IDC_STATIC_WIDTH		2003
+#define IDC_STATIC_HEIGHT		2004
+
+// 位图资源ID（用于连连看图标）
+#define IDB_ICON1				301
+#define IDB_ICON2				302
+#define IDB_ICON3				303
+#define IDB_ICON4				304
+#define IDB_ICON5				305
+#define IDB_ICON6				306
+#define IDB_ICON7				307
+#define IDB_ICON8				308
+#define IDB_ICON9				309
+#define IDB_ICON10				310
+#define IDB_ICON11				311
+#define IDB_ICON12				312
+
 // 新对象的下一组默认值
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 
 #define _APS_NO_MFC					130
-#define _APS_NEXT_RESOURCE_VALUE	129
-#define _APS_NEXT_COMMAND_VALUE		32771
-#define _APS_NEXT_CONTROL_VALUE		1000
+#define _APS_NEXT_RESOURCE_VALUE	313
+#define _APS_NEXT_COMMAND_VALUE		32773
+#define _APS_NEXT_CONTROL_VALUE		2005
 #define _APS_NEXT_SYMED_VALUE		110
 #endif
 #endif
