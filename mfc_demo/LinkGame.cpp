@@ -204,8 +204,8 @@ bool CLinkGame::CanLinkDirect(Point p1, Point p2)
 {
     if (p1.x == p2.x)
     {
-        int minY = min(p1.y, p2.y);
-        int maxY = max(p1.y, p2.y);
+        int minY = (p1.y < p2.y) ? p1.y : p2.y;
+        int maxY = (p1.y > p2.y) ? p1.y : p2.y;
         for (int y = minY + 1; y < maxY; y++)
         {
             if (!IsEmpty(p1.x, y))
@@ -215,8 +215,8 @@ bool CLinkGame::CanLinkDirect(Point p1, Point p2)
     }
     else if (p1.y == p2.y)
     {
-        int minX = min(p1.x, p2.x);
-        int maxX = max(p1.x, p2.x);
+        int minX = (p1.x < p2.x) ? p1.x : p2.x;
+        int maxX = (p1.x > p2.x) ? p1.x : p2.x;
         for (int x = minX + 1; x < maxX; x++)
         {
             if (!IsEmpty(x, p1.y))
